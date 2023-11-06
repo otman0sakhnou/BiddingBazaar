@@ -20,4 +20,5 @@ public class Item
   //nav propreties
   public Auction Auction {get;set;}
   public Guid AuctionID {get;set;}
+
 }
