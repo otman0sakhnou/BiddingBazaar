@@ -25,8 +25,8 @@ builder.Services.AddMassTransit(x=>
   }); 
 
   //add the config for the foulty consuming creation
-  // x.AddConsumersFromNamespaceContaining<AuctionCreatedFaultConsumer>();
-  // x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("auciton",false));
+  x.AddConsumersFromNamespaceContaining<AuctionCreatedFaultConsumer>();
+  x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("auction",false));
 
   x.UsingRabbitMq((context,cfg)=>
   {
