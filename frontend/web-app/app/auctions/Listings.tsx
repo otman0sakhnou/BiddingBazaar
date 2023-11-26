@@ -9,7 +9,7 @@ import Filters from "./Filters";
 import { useParamsStor } from "../hooks/useParamsStore";
 import { shallow } from "zustand/shallow";
 import qs from "query-string";
-import EmptyFilter from "../components/Emptyfilter";
+import EmptyFilter from "../components/EmptyFilter";
 
 export default function Listings() {
   const [data, setData] = useState<pagedResult<Auction>>();
