@@ -8,6 +8,8 @@ type State={
   searchValue:string
   orderBy:string
   filterBy:string
+  seller?:string
+  winner?:string
 }
 
 type Actions ={
@@ -22,7 +24,9 @@ const initialSate:State={
   searchTerm:'',
   searchValue:'',
   orderBy:'make',
-  filterBy:'live'
+  filterBy:'live',
+  seller:undefined,
+  winner:undefined
 }
 export const useParamsStor =createWithEqualityFn <State & Actions>()((set)=>({
   ...initialSate,

@@ -1,5 +1,6 @@
 import "./globals.css";
 import NavBar from "./nav/NavBar";
+import ToasProviders from "./providers/ToastProviders";
 
 export const metadata = {
   title: "BiddingBazaar",
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <ToasProviders/>
         <NavBar />
        <main className="container mx-auto px-5 pt-10">
        {children}

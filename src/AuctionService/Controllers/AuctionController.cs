@@ -94,7 +94,7 @@ public class AuctionController : ControllerBase
 
         var result = await _context.SaveChangesAsync() > 0;
 
-        if (result) return Ok();
+        if (result) return Ok(new{id=auction.Id});
         return BadRequest("Problem saving changes");
     }
     [Authorize]
@@ -114,7 +114,7 @@ public class AuctionController : ControllerBase
         var result = await _context.SaveChangesAsync() > 0;
 
         if (!result) return BadRequest("Couldn't delete");
-        return Ok();
+        return Ok(new {id=auction.Id});
 
 
 
